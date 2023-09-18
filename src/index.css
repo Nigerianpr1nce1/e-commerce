@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+body {
+  position: relative;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+}
+.nav-sect{
+  background-color: rgb(205, 197, 197);
+  width: 100%;
+  height: 20px;
+}
+.navbar {
+  background-color: rgb(18, 102, 102);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  padding: 20px 20px 20px 20px;
+  /* border: solid; */
+  width: fit-content;
+}
+.navlinks {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navlinks ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 60%;
+  padding: 20px 20px 10px 20px;
+}
+.navlinks li {
+  color: black;
+  font-size: 20px;
+  position: relative;
+}
+.navlinks li:hover {
+  color: fuchsia;
+  cursor: pointer;
+}
+.navlinks li:hover::after {
+    position: absolute;
+    top: 20px;
+    left: 0;
+  content: " ";
+  width: 100%;
+  margin: 2px 0 0 0;
+  height: 3px;
+  background-color: rgb(246, 32, 246);
+}
+.navlinks h3 {
+  border: 1px solid white;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  background-color: fuchsia;
+}
+.categories{
+  border: solid 1px;
+  border-radius: 5px;
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  width:280px;
+  height: 700px;
+}
+.categories p{
+  padding: 8px;
+  font-size: 20px
+}
+.categories li{
+  padding: 0 15px;
+}
+.sliderContainer{
+  position: absolute;
+  right: 30px;
+  top: 8rem;
+  width: 50%;
+  height: 300px;
+  background-color: mediumblue;
+}
+.hidden{
+  display: none;
+}
+.fontarrow{
+  width: 10px;
+  height: 10px;
+}
+.Women li{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
