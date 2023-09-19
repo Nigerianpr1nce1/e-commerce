@@ -72,7 +72,7 @@ nav{
   position: absolute;
   left: 20px;
   top: 120px;
-  width:280px;
+  width:250px;
   height: 700px;
 }
 .categories p{
@@ -97,8 +97,13 @@ nav{
   width: 10px;
   height: 10px;
 }
-.Women li{
+.Women li, .Men li, .kids li{
   display: flex;
   align-items: center;
+  gap: 5px;
+}
+p{
+  display: flex;
+  align-items: center ;
   gap: 5px;
 }
