@@ -4,12 +4,23 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGreaterThan} from '@fortawesome/free-solid-svg-icons';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 const Categories = () => {
+    const [isClothesActive , setIsClothesActive] = useState(false)
+    const [clothesArrow,setClothesArrow] = useState(faGreaterThan)
     const [isWomenActive ,setIsWomenActive] = useState(false)
     const [isMenActive ,setIsMenActive] = useState(false)
     const [isKidsActive ,setIsKidsActive] = useState(false)
     const [womanArrow,setwomanArrow] = useState(faGreaterThan)
     const [manArrow,setmanArrow] = useState(faGreaterThan)
     const [kidsArrow,setKidsArrow] = useState(faGreaterThan)
+
+    const clickClothes = (e) =>{
+      setIsClothesActive(current => !current)
+      if (clothesArrow === faGreaterThan){
+        setClothesArrow (faChevronDown)}
+      else {
+        setClothesArrow (faGreaterThan)
+        }
+    }
 
     const toggleWomenHidden = (e) =>{
         setIsWomenActive(current => !current)
@@ -23,7 +34,7 @@ const Categories = () => {
         if (womanArrow === faGreaterThan){
         setwomanArrow (faChevronDown)
         }
-        if (womanArrow === faChevronDown){
+        else{
           setwomanArrow (faGreaterThan)
           }
     }
@@ -38,7 +49,7 @@ const Categories = () => {
         if (manArrow === faGreaterThan){
           setmanArrow (faChevronDown)
           }
-          if (manArrow === faChevronDown){
+           else {
             setmanArrow (faGreaterThan)
             }
 
@@ -54,7 +65,7 @@ const Categories = () => {
         if (kidsArrow === faGreaterThan){
           setKidsArrow (faChevronDown)
           }
-          if (kidsArrow === faChevronDown){
+          else {
             setKidsArrow (faGreaterThan)
             }
 
@@ -62,45 +73,55 @@ const Categories = () => {
 
     return ( <>
     <div className="categories">
-        <p onClick={toggleWomenHidden}><FontAwesomeIcon icon={womanArrow} className = 'fontarrow' /> Women</p>
+      <div className="cosmetics">
+        
+      </div>
+      <div className="clothes">
+        <p onClick={clickClothes}> <FontAwesomeIcon icon={clothesArrow} className = 'fontarrow' />  CLOTHES</p>
+        {isClothesActive &&
+        <>
+                <p onClick={toggleWomenHidden}><FontAwesomeIcon icon={womanArrow} className = 'fontarrow' /> Women</p>
         {isWomenActive && 
-                <ul  className='Women'>
-                    <li> Shirt</li>
-                    <li> Sweaters</li>
-                    <li> Shorts</li>
-                    <li> Hoodies</li>
-                    <li> Trousers</li>
-                    <li> Footwear</li>
-                    <li> Sleepwear</li>
-                    <li> Accessories</li>
-                </ul>}
-        <p onClick={toggleMenHidden}><FontAwesomeIcon icon={manArrow} className = 'fontarrow' /> Men</p>
-        {isMenActive && 
-                <ul  className='Men'>
-                    <li> Shirt</li>
-                    <li> Sweaters</li>
-                    <li> Shorts</li>
-                    <li> Hoodies</li>
-                    <li> Trousers</li>
-                    <li> Footwear</li>
-                    <li> Sleepwear</li>
-                    <li> Accessories</li>
-                </ul>}
-
-        <p onClick={toggleKidsHidden}> <FontAwesomeIcon icon={kidsArrow} className = 'fontarrow' /> Kids</p>
-        <ul className='kids'>
-        {isKidsActive && 
-                <ul>
-                    <li> Shirt</li>
-                    <li> Sweaters</li>
-                    <li> Shorts</li>
-                    <li> Hoodies</li>
-                    <li> Trousers</li>
-                    <li> Footwear</li>
-                    <li> Sleepwear</li>
-                    <li> Accessories</li>
-                </ul>}
-        </ul>
+                        <ul  className='Women'>
+                            <li> Shirt</li>
+                            <li> Sweaters</li>
+                            <li> Shorts</li>
+                            <li> Hoodies</li>
+                            <li> Trousers</li>
+                            <li> Footwear</li>
+                            <li> Sleepwear</li>
+                            <li> Accessories</li>
+                        </ul>}
+                <p onClick={toggleMenHidden}><FontAwesomeIcon icon={manArrow} className = 'fontarrow' /> Men</p>
+                {isMenActive && 
+                        <ul  className='Men'>
+                            <li> Shirt</li>
+                            <li> Sweaters</li>
+                            <li> Shorts</li>
+                            <li> Hoodies</li>
+                            <li> Trousers</li>
+                            <li> Footwear</li>
+                            <li> Sleepwear</li>
+                            <li> Accessories</li>
+                        </ul>}
+        
+                <p onClick={toggleKidsHidden}> <FontAwesomeIcon icon={kidsArrow} className = 'fontarrow' /> Kids</p>
+                <ul className='kids'>
+                {isKidsActive && 
+                        <ul>
+                            <li> Shirt</li>
+                            <li> Sweaters</li>
+                            <li> Shorts</li>
+                            <li> Hoodies</li>
+                            <li> Trousers</li>
+                            <li> Footwear</li>
+                            <li> Sleepwear</li>
+                            <li> Accessories</li>
+                        </ul>}
+                </ul>
+                </>
+}
+        </div>
     </div>
     </> );
 }
