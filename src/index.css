@@ -6,13 +6,14 @@
 body {
   position: relative;
 }
-nav{
+nav {
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
-.nav-sect{
+.nav-sect {
   background-color: rgb(205, 197, 197);
   width: 100%;
   height: 20px;
@@ -51,9 +52,9 @@ nav{
   cursor: pointer;
 }
 .navlinks li:hover::after {
-    position: absolute;
-    top: 20px;
-    left: 0;
+  position: absolute;
+  top: 20px;
+  left: 0;
   content: " ";
   width: 100%;
   margin: 2px 0 0 0;
@@ -66,44 +67,72 @@ nav{
   padding: 10px 10px 10px 10px;
   background-color: fuchsia;
 }
-.categories{
+.categories {
   border: solid 1px;
   border-radius: 5px;
   position: absolute;
   left: 20px;
   top: 120px;
-  width:250px;
+  width: 250px;
   height: 700px;
+  z-index: 1;
 }
-.categories p{
+.categories p {
   padding: 8px;
-  font-size: 20px
+  font-size: 20px;
 }
-.categories li{
+.categories li {
   padding: 0 15px;
 }
-.sliderContainer{
-  position: absolute;
-  right: 30px;
-  top: 8rem;
-  width: 50%;
-  height: 300px;
-  background-color: mediumblue;
-}
-.hidden{
-  display: none;
-}
-.fontarrow{
+.fontarrow {
   width: 12px;
   height: 12px;
 }
-.Women li, .Men li, .kids li{
+.Women li,
+.Men li,
+.kids li {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-p{
+p {
   display: flex;
-  align-items: center ;
+  align-items: center;
   gap: 5px;
+}
+
+.sliderContainer {
+  position: absolute;
+  right: 10px;
+  top: 8rem;
+  width: 70%;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  background-color: red;
+  height: 300px;
+  min-width: 600px;
+}
+.right {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  color: white;
+}
+.left {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.sliderContainer img{
+  width: 100%;
+  height: 100%;
 }
