@@ -1,6 +1,7 @@
 import Categories from "./catergories";
 import NavBar from "./navbar";
 import Slider from "./slider";
+import './index.css'
 
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
         <>
         <NavBar/>
         <Slider/>
-        {/* <Categories/> */}
+        <Categories/>
         </>
     );
 }

@@ -8,9 +8,11 @@ const NavBar = () => {
           <div className="navlinks">
             <ul>
               <li>Home</li>
-              <li>Shop</li>
+              <li>Shop</li> 
               <li>Socials</li>
             </ul>
+          </div>
+          <div className="navbuttons">
             <h3>Sign In</h3>
             <h3>Create Account</h3>
           </div>
