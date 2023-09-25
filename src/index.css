@@ -28,11 +28,12 @@ nav {
   padding: 20px 20px 20px 20px;
   /* border: solid; */
   width: fit-content;
+  font-size:40px;
 }
 .navlinks {
   display: flex;
   width: 60%;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
 }
 .navlinks ul {
@@ -63,14 +64,19 @@ nav {
 }
 .navbuttons{
   display: flex;
-  width: 35%;
+  width: 25%;
   justify-content: space-around;
+  align-items:center;
 }
 .navbuttons h3{
+  display : flex;
+  justify-content:center;
+  align-items:center;
   border: 1px solid white;
   color: white;
   padding: 10px 10px 10px 10px;
   background-color: fuchsia;
+  height: 25px;
 
 } 
 .categories {
@@ -147,15 +153,30 @@ p {
     display: none;
   }
   .logo{
-  font-size: 40px;
-  border: solid;
+  font-size:30px;
+  position: absolute;
+  left: 20px;
   }
   .navbar{
     justify-content: space-around;
+    position:relative;
   }
-  .navlinks{
-    width: 40%;
-    border: solid;
+  .navbuttons{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    /* outline: 1px solid; */
+    right:10px;
+  }
+  .navbuttons h3{
+    font-size: 15px;
+    width: 50px;
+  }
+  .name{
+    position: absolute;
+    left: 40%;
+    right: 45%;
+    top: 20px;
   }
 }
 
