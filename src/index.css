@@ -31,37 +31,10 @@ nav {
   width: fit-content;
   font-size: 40px;
 }
-.navlinks {
+.name{
+  font-size: 35px;
   display: flex;
-  width: 60%;
-  justify-content: center;
   align-items: center;
-}
-.navlinks ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
-  width: 60%;
-  padding: 20px 20px 10px 20px;
-}
-.navlinks li {
-  color: black;
-  font-size: 20px;
-  position: relative;
-}
-.navlinks li:hover {
-  color: fuchsia;
-  cursor: pointer;
-}
-.navlinks li:hover::after {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  content: " ";
-  width: 100%;
-  margin: 2px 0 0 0;
-  height: 3px;
-  background-color: rgb(246, 32, 246);
 }
 .navbuttons {
   display: flex;
@@ -73,10 +46,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
   color: white;
   padding: 10px 10px 10px 10px;
-  background-color: fuchsia;
   height: 25px;
 }
 .categories {
@@ -168,6 +139,7 @@ p {
     right: 10px;
   }
   .navbuttons h3 {
+    background-color: transparent;
     font-size: 15px;
     width: 50px;
   }
@@ -181,7 +153,7 @@ p {
     width: 100%;
     height: 200px;
     left: 0;
-    top: 140px;
+    top: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,7 +166,7 @@ p {
     
   }
   .slider {
-    width: 60%;
+    width: 80%;
     position: relative;
     height: 300px;
   }
